@@ -26,9 +26,12 @@ $$
 
 **4. Hessian correction of the Fisher information.** For non-zero residuals, the corrected curvature is
 
-$$K = F + r^*\otimes H .$$
+```math
+K = F + r^*\otimes H .
+```
 
-The residual term lifts small eigenvalues of $F$ along ker $F$. *Theorem 3* gives a crossover at $\varepsilon_* = \gamma\nu/c_2$, where $\nu = \lVert r^*\rVert_2$ and $\gamma = \min_{\xi\in\ker F,\,\lVert\xi\rVert_2=1}\langle\hat r, \Pi^\perp H[\xi,\xi]\rangle$ is the residual curvature on ker $F$: stability is Lipschitz for $\varepsilon\le\varepsilon_*$ and Hölder-1/2 for $\varepsilon\ge\varepsilon_*$.
+The residual term lifts small eigenvalues of $`F`$ along ker $`F`$. *Theorem 3* gives a crossover at $`\varepsilon_{*} = \gamma\nu/c_2`$, where $`\nu = \lVert r^*\rVert_2`$ and $`\gamma = \min_{\xi\in\ker F,\,\lVert\xi\rVert_2=1}\langle\hat r, \Pi^\perp H[\xi,\xi]\rangle`$ is the residual curvature on ker $`F`$: stability is Lipschitz for $`\varepsilon\le\varepsilon_{*}`$ and Hölder-1/2 for $`\varepsilon\ge\varepsilon_{*}`$.
+
 
 **5. Coordinate identifiability and uncertainty quantification.** Partitioning $K$ with respect to coordinate $p$ gives the profiled curvature $\kappa_p = K_{pp} - k_p^\top\tilde K^{-1}k_p$ (*Theorem 4*); coordinate $\eta_p$ is identifiable iff $\kappa_p > 0$, with Lipschitz coefficient $L_p$ for the profiled loss. Uncertainty is then propagated with the quadratic posterior $\eta\mid\hat h \sim \mathcal N(\eta^*, \Sigma_\eta)$, comparing $K$-based and $F$-based intervals for parameters and model predictions (and against MCMC).
 
